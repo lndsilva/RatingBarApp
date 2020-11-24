@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    //Declarar as variáveis globais para o xml
     RatingBar ratingBar;
     TextView txtResultado;
     Button btnEnviar;
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //chamando os métodos para executar
 
         addListenerOnRatingBar();
         addListenerOnButton();
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                txtResultado.setText(String.valueOf(rating));
+                txtResultado.setText(" "+String.valueOf(rating));
             }
         });
     }
